@@ -25,13 +25,13 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource,UICo
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+        collectionView.backgroundColor = .white
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
-        let width = (view.frame.size.width - layout.minimumInteritemSpacing) / 2
-        layout.itemSize = CGSize(width: width, height: width*3/2)
+  //      layout.minimumLineSpacing = 0
+   //     layout.minimumInteritemSpacing = 0
+  //      let width = (view.frame.size.width - layout.minimumInteritemSpacing) / 2
+   //     layout.itemSize = CGSize(width: width, height: width*3/2)
         
         
         
@@ -68,7 +68,10 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource,UICo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width/2.5, height: view.frame.height/3)
     }
+     
     */
+    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieGridCell", for: indexPath) as! MovieGridCell
